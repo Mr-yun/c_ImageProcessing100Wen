@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.5)
+project(opencv_yanli)
+
+set(CMAKE_CXX_STANDARD 14)
+
+FIND_PACKAGE(OpenCV REQUIRED)
+MESSAGE("OpenCV VERSION : ${OPENCV_VERSION}")
+
+INCLUDE_DIRECTORIES(${OPENCV_INCLUDE_DIRS})
+LINK_DIRECTORIES(${OPENCV_LIB_DIR})
+
+ADD_EXECUTABLE(answer_1 answer_1.cpp)
+TARGET_LINK_LIBRARIES(answer_1 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(answer_2 answer_2.cpp)
+TARGET_LINK_LIBRARIES(answer_2 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(test_10  test_10.cpp answer_1.cpp answer_2.cpp answer_3.cpp)
+TARGET_LINK_LIBRARIES( test_10 ${OpenCV_LIBS} )
+

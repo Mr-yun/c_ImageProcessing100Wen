@@ -97,5 +97,20 @@ TARGET_LINK_LIBRARIES(answer_29 ${OpenCV_LIBS} )
 ADD_EXECUTABLE(answer_30 answer_30.cpp)
 TARGET_LINK_LIBRARIES(answer_30 ${OpenCV_LIBS} )
 
+ADD_EXECUTABLE(answer_31 answer_31.cpp)
+TARGET_LINK_LIBRARIES(answer_31 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(answer_32 answer_32.cpp)
+TARGET_LINK_LIBRARIES(answer_32 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(answer_33 answer_33.cpp)
+TARGET_LINK_LIBRARIES(answer_33 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(answer_34 answer_34.cpp)
+TARGET_LINK_LIBRARIES(answer_34 ${OpenCV_LIBS} )
+
+ADD_EXECUTABLE(answer_35 answer_35.cpp)
+TARGET_LINK_LIBRARIES(answer_35 ${OpenCV_LIBS} )
+
 
 

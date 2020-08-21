@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
+from glob import glob
+
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from glob import glob
+
 
 ## 图片颜色分为个区域
 def dic_color(img):
@@ -10,9 +11,9 @@ def dic_color(img):
     img = img * 64 + 32
     return img
 
+
 ## Database
 def get_DB():
-
     # dataset目录下查找已train_开头的文件
     train = glob("dataset/train_*")
     train.sort()
@@ -28,8 +29,8 @@ def get_DB():
         # get histogram
         for j in range(4):
             db[i, j] = len(np.where(img[..., 0] == (64 * j + 32))[0])
-            db[i, j+4] = len(np.where(img[..., 1] == (64 * j + 32))[0])
-            db[i, j+8] = len(np.where(img[..., 2] == (64 * j + 32))[0])
+            db[i, j + 4] = len(np.where(img[..., 1] == (64 * j + 32))[0])
+            db[i, j + 8] = len(np.where(img[..., 2] == (64 * j + 32))[0])
 
             # get class
             if 'akahara' in path:

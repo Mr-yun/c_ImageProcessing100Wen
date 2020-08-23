@@ -41,7 +41,10 @@ def bl_interpolate(img, ax=1., ay=1.):
 		dy = np.repeat(np.expand_dims(dy, axis=-1), C, axis=-1)
 
 	# interpolation
-	out = (1-dx) * (1-dy) * img[iy, ix] + dx * (1 - dy) * img[iy, ix+1] + (1 - dx) * dy * img[iy+1, ix] + dx * dy * img[iy+1, ix+1]
+	out = (1-dx) * (1-dy) * img[iy, ix] + \
+          dx * (1 - dy) * img[iy, ix+1] + \
+          (1 - dx) * dy * img[iy+1, ix] + \
+          dx * dy * img[iy+1, ix+1]
 
 	out = np.clip(out, 0, 255)
 	out = out.astype(np.uint8)
